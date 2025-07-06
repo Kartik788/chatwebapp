@@ -1,0 +1,30 @@
+<!-- web/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form onsubmit="event.preventDefault(); signup();">
+            <label>Username:</label>
+            <input type="text" id="username" required>
+
+            <label>Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="responseMsg" style="color: red; margin-top: 10px;"></p>
+
+        <p>Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

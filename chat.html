@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat - MyApp</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Left Sidebar: User List -->
+        <div class="user-list">
+            <h2>Chats</h2>
+            <ul id="userList" class="user-list-container">
+                <!-- Dynamically populated -->
+            </ul>
+            <br>
+            <h2>Recently connected</h2>
+            <ul id="newUsers" class="user-list-container">
+                <!-- Dynamically populated -->
+            </ul>
+        </div>
+
+        <!-- Right Chat Box -->
+        <div class="chat-box">
+            <div class="chat-header">
+                <p><strong>You:</strong> <span id="currentUser"></span></p>
+                <h3 id="chatWith">Select a user to chat with</h3>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message..." id="messageInput">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script src="chat.js"></script>
+    
+</body>
+</html>
+
